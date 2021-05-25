@@ -8,7 +8,7 @@ int main()
    { 
       int n;
       cin>>n;
-      int a[n],sum=0,i,min=INT_MAX;
+      int a[n],sum=0,i;
       for(i=0;i<n;i++)
       { 
           cin>>a[i];
