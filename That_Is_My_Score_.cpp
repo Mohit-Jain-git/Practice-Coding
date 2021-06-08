@@ -9,18 +9,18 @@ int main()
    { 
        int n,sum=0;
        cin>>n;
-       int p[n],s[n];
+       int p,s;
+       int a[n];
+       for(int k=1;k<=11;k++)
+        a[k]=0;
        for(int i=0;i<n;i++)
        { 
-          cin>>p[i]>>s[i];
+            cin>>p>>s;
+            if(p<9 && a[p]<s)
+            a[p]=s;
        }
-       for(int i=0;i<n;i++)
-       { 
-          if(p[i]>=1 && p[i]<=8)
-          { 
-             sum = sum + s[i];
-          }
-       }
+       for(int i=1;i<11;i++)
+        sum = sum + a[i];
        cout<<sum<<endl;
    }
    return 0;
